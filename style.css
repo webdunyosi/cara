@@ -11,19 +11,12 @@ html {
 }
 
 /* Global Styles */
-
 h1 {
-  font-size: 50px;
-  line-height: 64px;
   color: #222;
 }
-
 h2 {
-  font-size: 46px;
-  line-height: 54px;
   color: #222;
 }
-
 h4 {
   font-size: 20px;
   color: #222;
@@ -73,20 +66,46 @@ a {
   align-items: center;
   gap: 20px;
 }
-.navbar a {
+.navbar-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navbar-list a {
   font-size: 16px;
   font-weight: 600;
   color: #1a1a1a;
-  transition: .3s;
+  transition: 0.3s;
   border-bottom: 2px solid transparent;
 }
-.navbar a:hover,
-.navbar a.active {
+.navbar-list a:hover,
+.navbar-list a.active {
   color: #088178;
   border-bottom: 2px solid #088178;
 }
 .navbar i {
   font-size: 24px;
+}
+.navbar i:hover {
+  color: #088178;
+}
+.navbar .menu {
+  display: none;
+  cursor: pointer;
+}
+.navbar .menu:hover {
+  color: #088178;
+}
+@media (max-width: 650px) {
+  .topbar {
+    padding: 10px 5%;
+  }
+  .navbar-list {
+    display: none;
+  }
+  .navbar .menu {
+    display: block;
+  }
 }
 /* Header */
 .header {
@@ -105,6 +124,11 @@ a {
 }
 .header-text h1 {
   color: #088178;
+  font-size: 50px;
+  margin-top: 10px;
+}
+.header-text h2 {
+  font-size: 50px;
 }
 .header-text a {
   background-image: url("img/button.png");
@@ -115,4 +139,17 @@ a {
   font-weight: 700;
   display: inline-block;
   color: #088178;
+}
+@media (max-width: 650px) {
+  .header-text {
+    padding-left: 5%;
+  }
+  .header-text h1 {
+    color: #088178;
+    font-size: 40px;
+    margin-top: 10px;
+  }
+  .header-text h2 {
+    font-size: 40px;
+  }
 }
